@@ -14,12 +14,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # ios style icons
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  # Linting rules for Flutter apps, packages, and plugins
   flutter_lints: ^6.0.0
 
 
