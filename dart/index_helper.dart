@@ -25,5 +25,36 @@ void main(){
   final {'name': name, 'age': age, 'city': city} = jsonData;
   print('$name, $age, $city');
 
+  final human = Human('Alice', 25);
+  final Human(name: humanName, age: humanAge) = human;
+  print('$humanName, $humanAge');
+
+
+  List<String> fruits = ['apple', 'banana', 'cherry'];
+  int index = 0;
+  switch (fruits){
+    // swtich matching whole list, if we dont want to manth then we can use '_'
+    case ['apple' || 'APPLE', _ , 'cherry' || 'CHERRY'] when index != 1:
+      print('Found apple and cherry');
+    default:
+      print('No match');
+  }
+
+  String fruit = 'banana';
+  fruit.capitalFirstLetter();
+  print(fruit.capitalFirstLetter());
+  print(fruit);
 }
 
+
+class Human {
+  final String name;
+  final int age;
+  Human(this.name, this.age);
+}
+
+extension CapitalFirstLetter on String {
+  String capitalFirstLetter() {
+    return this[0].toUpperCase() + substring(1);
+  }
+}
